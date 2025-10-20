@@ -86,7 +86,7 @@ void GildedRose::updateQuality()
 
     for (int i = 0; i < items.size(); i++)
     {
-        if (items[i].name == "Sulfuras, Hand of Ragnaros")
+        if (items[i].name.find("Sulfuras") != string::npos)
         {
             continue;
         }
@@ -95,7 +95,7 @@ void GildedRose::updateQuality()
         {
             items[i].quality += 2;
         }
-        else if (items[i].name == "Backstage passes to a TAFKAL80ETC concert")
+        else if (items[i].name.find("Backstage passes") != string::npos)
         {
             if (items[i].sellIn <= 5)
             {
@@ -108,7 +108,7 @@ void GildedRose::updateQuality()
                 items[i].quality = 0;
             }
         }
-        else if (items[i].name == "Conjured Mana Cake")
+        else if (items[i].name.find("Conjured") != string::npos)
         {
             items[i].quality -= 2;
         }
