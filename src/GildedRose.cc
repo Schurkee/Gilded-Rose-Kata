@@ -100,12 +100,10 @@ void GildedRose::updateQuality()
             if (items[i].sellIn <= 5)
             {
                 items[i].quality += 3;
-            }
-            if (items[i].sellIn <= 10)
+            }else if (items[i].sellIn <= 10)
             {
                 items[i].quality += 2;
-            }
-            if (items[i].sellIn <= 0)
+            }else if (items[i].sellIn <= 0)
             {
                 items[i].quality = 0;
             }
